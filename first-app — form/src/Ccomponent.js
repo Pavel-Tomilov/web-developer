@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from '@mui/material/Button';
 
 export default class Ccomponent extends Component {
     constructor(props) {
@@ -32,6 +33,7 @@ export default class Ccomponent extends Component {
     render() {
         return (
             <div>
+                <h1>Hello World</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input value={this.state.input} onChange={this.handleChange} />
                     <button type="submit">Submit</button>
@@ -41,6 +43,14 @@ export default class Ccomponent extends Component {
                         <li key={index}>{item}</li>
                     ))}
                 </ul>
+
+                <Button color="secondary">Secondary</Button>
+                <Button variant="contained" color="success">
+                    Success
+                </Button>
+                <Button variant="outlined" color="error">
+                    Error
+                </Button>
             </div>
         )
     }
